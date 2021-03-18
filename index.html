@@ -1,0 +1,69 @@
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <style>
+
+      body{
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Balsamiq Sans', cursive;
+        color: lightblue;
+        background-color: brown;
+      }
+      table{
+        margin: auto;
+      }
+    </style>
+      <script>
+         function ageCheck()
+         {
+          var x =  document.getElementById("byear").value;
+            if(x >= 2021)
+            {
+              alert("INVALID")
+            }
+            else if(x<=1821)
+            {
+              alert("INVALID you can't possibly be this age. Please re-type.")
+            }
+            else if (x <= 2011)
+            {
+              //this is older than 10
+              ("you are either 10 or older")
+              document.getElementById("pic1").innerHTML = "<img src = 'pizza1.jpg' onclick = 'printYes()''>"
+              document.getElementById("pic2").innerHTML = "<img src = 'ny.jpg' onclick = 'printYes()''>"
+              document.getElementById("pic3").innerHTML = "<img src = 'icecream.jpg' onclick = 'printNo()''>"
+            }
+            else {
+              //alert("you are younger than 10")
+              document.getElementById("pic1").innerHTML = "<img src = 'apple.jpg' onclick = 'printYes()''>"
+              document.getElementById("pic2").innerHTML = "<img src = 'HNC.jpg' onclick = 'printYes()''>"
+              document.getElementById("pic3").innerHTML = "<img src = 'cheezit.jpg' onclick = 'printNo()''>"
+            }
+         }
+         function printYes()
+         {
+            alert("That was a healty choice!")
+         }
+         function printNo()
+         {
+            alert("That was an unhealthy choise")
+         }
+      </script>
+    </head>
+
+    <body>
+       <h1>Welcome to the food chooser Program</h1>
+       <p>Please type in your name. Then click on the image you think is a right choice to have</p>
+       <input type = "text" value = "Type Birth Year" id = "byear">
+       <input type = "button" value = "Submit" onclick = "ageCheck()" id = "sButton">
+       <table>
+         <tr>
+           <td id = "pic1"></td>
+           <td id = "pic2"></td>
+           <td id = "pic3"></td>
+         </tr>
+       </table>
+       <p id = "message"></p><!--Yes or No Message gets sent here-->
+    </body>
+</html>
